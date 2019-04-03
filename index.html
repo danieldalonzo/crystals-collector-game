@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Crystals Collector Game</title>
+</head>
+
+<body>
+
+  <div class="container-auto">
+
+    <div class="row">
+      <div class="col-3">
+        <h1>
+          Crystals Collector
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 instructions">
+        <ul>
+          <li>You will be given a random number at the start of the game.</li>
+          <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.</li>
+          <li>You win the game by matching your total score to a random number, you lose the game if your total score
+            goes
+            above the random number</li>
+          <li>The value of each crystal is hidden from you until you click on it.</li>
+          <li>Each time when the game starts, the game will change the values of each crystal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-sm-3 randomNum">
+        Random Generated Number: <span id="randomNum"></span>
+      </div>
+      <div class="col-sm-1 WL">
+        <div class="wins">Wins: <span id="wins"></span></div>
+        <div class="losses">Losses: <span id="losses"></span></div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="assets/images/bluegem.png" id="img1" height="150" width="150" alt="Blue Gem" class="crystal"
+          data-crystalVal="10"></img>
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/greenemerald.png" id="img2" height="150" width="150" alt="Green Emerald" class="crystal"
+          data-crystalVal="5">
+        </img>
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/purpletriangle.png" id="img3" height="150" width="150" alt="Purple Triangle"
+          class="crystal" data-crystalVal="2"></img>
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/redruby.png" id="img4" height="150" width="150" alt="Red Ruby" class="crystal"
+          data-crystalVal="1"></img>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-3 totalScore">Your total score is: <span id="totalScore"></span></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>
