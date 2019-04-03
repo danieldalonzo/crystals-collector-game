@@ -18,22 +18,33 @@ $(document).ready(function () {
   function randomNumGen() {
     return Math.floor(Math.random() * 102) + 19;
   }
-  
 
   function randomCrystalVal() {
     return Math.floor(Math.random() * 12) + 1;
   }
 
+  function newGame() {
+    randomNum = randomNumGen();
+    $("#img1").attr("data-crystalVal", randomCrystalVal());
+    $("#img2").attr("data-crystalVal", randomCrystalVal());
+    $("#img3").attr("data-crystalVal", randomCrystalVal());
+    $("#img4").attr("data-crystalVal", randomCrystalVal());
+    $randomNum.text(randomNum);
+    totalScore = 0;
+    console.log("NEW GAME STARTED");
+  }
+  
   //crystal images need on click function and totalScore adds up
   //crystal images need random numbers that are hidden (.attr)
   //user wins if their score matches the random generated number
   //user loses if their score goes over the random generated number
   //post wins and losses
-  $("#img1").attr("data-crystalVal", randomCrystalVal());
+
+ /*  $("#img1").attr("data-crystalVal", randomCrystalVal());
   $("#img2").attr("data-crystalVal", randomCrystalVal());
   $("#img3").attr("data-crystalVal", randomCrystalVal());
   $("#img4").attr("data-crystalVal", randomCrystalVal());
-  $randomNum.text(randomNum);
+  $randomNum.text(randomNum); */
 
   $(".crystal").on("click", function () {
     var value = $(this).attr("data-crystalVal");
@@ -44,10 +55,12 @@ $(document).ready(function () {
     if (totalScore > randomNum) {
       alert("You Lost!");
       losses++;
+      newGame();
     }
     if (randomNum === totalScore) {
       alert("You Win!");
       wins++;
+      newGame();
     }
     $totalScore.text(totalScore);
     $wins.text(wins);
@@ -55,5 +68,6 @@ $(document).ready(function () {
 
     //line 55 
   });
+  newGame();
   //don't delete
 });
