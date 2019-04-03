@@ -14,7 +14,7 @@ $(document).ready(function () {
   var $losses = $("#losses");
   var $totalScore = $("#totalScore");
 
-  //create function to generate random number and resets total score
+  //create function to generate random number and resets game
   function randomNumGen() {
     return Math.floor(Math.random() * 102) + 19;
   }
@@ -33,7 +33,7 @@ $(document).ready(function () {
     totalScore = 0;
     console.log("NEW GAME STARTED");
   }
-  
+
   //crystal images need on click function and totalScore adds up
   //crystal images need random numbers that are hidden (.attr)
   //user wins if their score matches the random generated number
