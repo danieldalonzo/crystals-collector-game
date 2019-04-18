@@ -13,3 +13,5 @@ The player wins if their total score matches the random number from the beginnin
 The player loses if their score goes above the random number.
 
 The game restarts whenever the player wins or loses.
+
+https://adamcsiks.github.io/crystals-collector-game/
